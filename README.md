@@ -103,6 +103,3 @@ Steps:
 
 This project is for educational and demonstration purposes.
 
----
-
-If you want, I can also give you a **more professional GitHub README (portfolio-level)** that looks much better for recruiters and projects.
