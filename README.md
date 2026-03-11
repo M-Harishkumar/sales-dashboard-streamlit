@@ -1,105 +1,80 @@
-# Sales Dashboard – Streamlit App
+# 💸 Personal Expense Tracker
 
-## Overview
+A simple expense tracking web app built with Streamlit. You can add expenses, view charts, filter by category, and export your data as CSV.
 
-This project is a simple interactive **Sales Dashboard** built using **Streamlit, Pandas, NumPy, and Matplotlib**.
-The dashboard visualizes monthly sales data, expenses, profits, and regional sales distribution.
+---
 
-It allows users to filter data by region and view key business metrics through charts and summary indicators.
+## Tech Stack
+
+- Python
+- Streamlit
+- Pandas
+- Matplotlib
 
 ---
 
 ## Features
 
-* Interactive dashboard built with Streamlit
-* Region-based filtering using sidebar controls
-* Key metrics display:
-
-  * Total Sales
-  * Total Expenses
-  * Net Profit
-* Monthly Sales vs Expenses line chart
-* Profit by Month bar chart
-* Sales distribution by region pie chart
-* Raw data table view
+- Add expenses with date, category, description, and amount
+- Summary metrics — total spent, average, and top category
+- Pie chart and bar chart breakdown by category
+- Daily spending trend line chart
+- Filter expenses by category
+- Upload an existing CSV file
+- Export your data back to CSV
 
 ---
 
-## Technologies Used
+## How to Run
 
-* Python
-* Streamlit
-* Pandas
-* NumPy
-* Matplotlib
+**1. Clone or download the project**
+
+```bash
+git clone <your-repo-url>
+cd expense-tracker
+```
+
+**2. Create a virtual environment (recommended)**
+
+```bash
+python -m venv venv
+source venv/bin/activate        # Mac/Linux
+venv\Scripts\activate           # Windows
+```
+
+**3. Install dependencies**
+
+```bash
+pip install -r requirements.txt
+```
+
+**4. Run the app**
+
+```bash
+streamlit run app.py
+```
+
+The app will open automatically in your browser at `http://localhost:8501`
+
+---
+
+## CSV Upload Format
+
+If you want to load existing data, your CSV file should have these columns:
+
+```
+Date, Category, Description, Amount
+2024-01-15, Food, Lunch, 150.00
+2024-01-16, Transport, Bus fare, 30.00
+```
 
 ---
 
 ## Project Structure
 
 ```
-sales-dashboard-streamlit
-│
+expense-tracker/
 ├── app.py
 ├── requirements.txt
 └── README.md
 ```
-
----
-
-## Installation
-
-Clone the repository:
-
-```
-git clone https://github.com/yourusername/sales-dashboard-streamlit.git
-```
-
-Navigate to the project folder:
-
-```
-cd sales-dashboard-streamlit
-```
-
-Install required dependencies:
-
-```
-pip install -r requirements.txt
-```
-
----
-
-## Run the Application
-
-Start the Streamlit app:
-
-```
-streamlit run app.py
-```
-
-The application will open in your browser at:
-
-```
-http://localhost:8501
-```
-
----
-
-## Deployment
-
-This app can be deployed using **Streamlit Community Cloud**.
-
-Steps:
-
-1. Upload the project to a GitHub repository
-2. Go to [https://share.streamlit.io](https://share.streamlit.io)
-3. Connect your GitHub repository
-4. Select the repository and main file (`app.py`)
-5. Click Deploy
-
----
-
-## License
-
-This project is for educational and demonstration purposes.
-
