@@ -1,80 +1,69 @@
-# 💸 Personal Expense Tracker
+# � Ultimate Sales Intelligence
 
-A simple expense tracking web app built with Streamlit. You can add expenses, view charts, filter by category, and export your data as CSV.
+A dynamic enterprise sales analytics dashboard built with Streamlit.
+The app generates simulated monthly sales data and provides interactive filtering, KPIs, visualizations, forecasting, and CSV export.
 
 ---
 
 ## Tech Stack
 
-- Python
+- Python 3.8+
 - Streamlit
 - Pandas
-- Matplotlib
+- NumPy
+- Plotly
 
 ---
 
-## Features
+## App Features
 
-- Add expenses with date, category, description, and amount
-- Summary metrics — total spent, average, and top category
-- Pie chart and bar chart breakdown by category
-- Daily spending trend line chart
-- Filter expenses by category
-- Upload an existing CSV file
-- Export your data back to CSV
+- Synthetic dataset generation (monthly sales by region, category, profit, units, satisfaction)
+- Sidebar filters: regions and product categories
+- Profit simulator with adjustable projected growth and expense reduction
+- KPI cards for revenue, profit, satisfaction score, and units
+- Multi-tab analytics:
+  - Performance trend (line chart + regional bar chart)
+  - Market map (treemap + profitability gauge)
+  - What-if forecast projections
+  - Raw filtered data with live search and CSV export
+- Custom neon-glass UI styling and responsive layout
 
 ---
 
-## How to Run
+## Requirements
 
-**1. Clone or download the project**
-
-```bash
-git clone <your-repo-url>
-cd expense-tracker
-```
-
-**2. Create a virtual environment (recommended)**
-
-```bash
-python -m venv venv
-source venv/bin/activate        # Mac/Linux
-venv\Scripts\activate           # Windows
-```
-
-**3. Install dependencies**
+Make sure to install dependencies (see `requirements.txt`):
 
 ```bash
 pip install -r requirements.txt
 ```
 
-**4. Run the app**
+---
+
+## Run the App
 
 ```bash
 streamlit run app.py
 ```
 
-The app will open automatically in your browser at `http://localhost:8501`
-
----
-
-## CSV Upload Format
-
-If you want to load existing data, your CSV file should have these columns:
-
-```
-Date, Category, Description, Amount
-2024-01-15, Food, Lunch, 150.00
-2024-01-16, Transport, Bus fare, 30.00
-```
+Open in browser at `http://localhost:8501`.
 
 ---
 
 ## Project Structure
 
 ```
-expense-tracker/
+capstone project/
 ├── app.py
 ├── requirements.txt
 └── README.md
 ```
+
+---
+
+## Notes
+
+- Data is generated in-memory at startup (`@st.cache_data` for performance).
+- The app currently uses simulated ERP dataset; replace `get_data()` for real input sources.
+- The footer includes refresh logic and system status indicators.
+
